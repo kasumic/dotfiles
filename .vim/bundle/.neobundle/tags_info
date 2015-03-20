@@ -1,0 +1,13 @@
+neobundle.vim
+neocomplcache
+neomru.vim
+nerdtree
+unite.vim
+vim-ansible-yaml
+vim-colors-solarized
+vim-endwise
+vim-powerline
+vim-quickrun
+vimfiler.vim
+vimproc
+vimshell
