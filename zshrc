@@ -65,7 +65,7 @@ case ${OSTYPE} in
     PROMPT='%F{white}[%n@%f%F{yellow}%m%f %F{white}%c]%# %f'
     alias ls="ls -GF"
     alias ctags="/usr/local/bin/ctags"
-    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     ;;
   linux*)
     PROMPT='%F{green}[%n@%f%F{blue}%m%f %F{green}%c]%# %f'
