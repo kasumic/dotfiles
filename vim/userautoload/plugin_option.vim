@@ -9,6 +9,7 @@ let g:quickrun_config = {
 \       "outputter/buffer/split" : ":botright 8sp",
 \       "runner" : "vimproc",
 \       "runner/vimproc/updatetime" : 40,
+\       "hook/time/enable": 1,
 \   }
 \}
 set splitbelow
