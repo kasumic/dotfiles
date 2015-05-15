@@ -1,46 +1,3 @@
-'NERDTreeAutoCenter'	NERD_tree.txt	/*'NERDTreeAutoCenter'*
-'NERDTreeAutoCenterThreshold'	NERD_tree.txt	/*'NERDTreeAutoCenterThreshold'*
-'NERDTreeAutoDeleteBuffer'	NERD_tree.txt	/*'NERDTreeAutoDeleteBuffer'*
-'NERDTreeBookmarksFile'	NERD_tree.txt	/*'NERDTreeBookmarksFile'*
-'NERDTreeBookmarksSort'	NERD_tree.txt	/*'NERDTreeBookmarksSort'*
-'NERDTreeCascadeOpenSingleChildDir'	NERD_tree.txt	/*'NERDTreeCascadeOpenSingleChildDir'*
-'NERDTreeCaseSensitiveSort'	NERD_tree.txt	/*'NERDTreeCaseSensitiveSort'*
-'NERDTreeChDirMode'	NERD_tree.txt	/*'NERDTreeChDirMode'*
-'NERDTreeDirArrows'	NERD_tree.txt	/*'NERDTreeDirArrows'*
-'NERDTreeHighlightCursorline'	NERD_tree.txt	/*'NERDTreeHighlightCursorline'*
-'NERDTreeHijackNetrw'	NERD_tree.txt	/*'NERDTreeHijackNetrw'*
-'NERDTreeIgnore'	NERD_tree.txt	/*'NERDTreeIgnore'*
-'NERDTreeMinimalUI'	NERD_tree.txt	/*'NERDTreeMinimalUI'*
-'NERDTreeMouseMode'	NERD_tree.txt	/*'NERDTreeMouseMode'*
-'NERDTreeQuitOnOpen'	NERD_tree.txt	/*'NERDTreeQuitOnOpen'*
-'NERDTreeRespectWildIgnore'	NERD_tree.txt	/*'NERDTreeRespectWildIgnore'*
-'NERDTreeShowBookmarks'	NERD_tree.txt	/*'NERDTreeShowBookmarks'*
-'NERDTreeShowFiles'	NERD_tree.txt	/*'NERDTreeShowFiles'*
-'NERDTreeShowHidden'	NERD_tree.txt	/*'NERDTreeShowHidden'*
-'NERDTreeShowLineNumbers'	NERD_tree.txt	/*'NERDTreeShowLineNumbers'*
-'NERDTreeSortOrder'	NERD_tree.txt	/*'NERDTreeSortOrder'*
-'NERDTreeStatusline'	NERD_tree.txt	/*'NERDTreeStatusline'*
-'NERDTreeWinPos'	NERD_tree.txt	/*'NERDTreeWinPos'*
-'NERDTreeWinSize'	NERD_tree.txt	/*'NERDTreeWinSize'*
-'loaded_nerd_tree'	NERD_tree.txt	/*'loaded_nerd_tree'*
-'solarized_bold'	solarized.txt	/*'solarized_bold'*
-'solarized_contrast'	solarized.txt	/*'solarized_contrast'*
-'solarized_degrade'	solarized.txt	/*'solarized_degrade'*
-'solarized_hitrail'	solarized.txt	/*'solarized_hitrail'*
-'solarized_italic'	solarized.txt	/*'solarized_italic'*
-'solarized_menu'	solarized.txt	/*'solarized_menu'*
-'solarized_termcolors'	solarized.txt	/*'solarized_termcolors'*
-'solarized_termtrans'	solarized.txt	/*'solarized_termtrans'*
-'solarized_underline'	solarized.txt	/*'solarized_underline'*
-'solarized_visibility'	solarized.txt	/*'solarized_visibility'*
-:NERDTree	NERD_tree.txt	/*:NERDTree*
-:NERDTreeCWD	NERD_tree.txt	/*:NERDTreeCWD*
-:NERDTreeClose	NERD_tree.txt	/*:NERDTreeClose*
-:NERDTreeFind	NERD_tree.txt	/*:NERDTreeFind*
-:NERDTreeFromBookmark	NERD_tree.txt	/*:NERDTreeFromBookmark*
-:NERDTreeMirror	NERD_tree.txt	/*:NERDTreeMirror*
-:NERDTreeToggle	NERD_tree.txt	/*:NERDTreeToggle*
-:Neco	neocomplcache.txt	/*:Neco*
 :NeoBundle	neobundle.txt	/*:NeoBundle*
 :NeoBundleCheck	neobundle.txt	/*:NeoBundleCheck*
 :NeoBundleCheckUpdate	neobundle.txt	/*:NeoBundleCheckUpdate*
@@ -68,6 +25,7 @@
 :NeoBundleUpdate	neobundle.txt	/*:NeoBundleUpdate*
 :NeoBundleUpdate!	neobundle.txt	/*:NeoBundleUpdate!*
 :NeoBundleUpdatesLog	neobundle.txt	/*:NeoBundleUpdatesLog*
+<<<<<<< HEAD
 :NeoComplCacheAutoCompletionLength	neocomplcache.txt	/*:NeoComplCacheAutoCompletionLength*
 :NeoComplCacheCachingBuffer	neocomplcache.txt	/*:NeoComplCacheCachingBuffer*
 :NeoComplCacheCachingDictionary	neocomplcache.txt	/*:NeoComplCacheCachingDictionary*
@@ -391,6 +349,8 @@ buffer_complete	neocomplcache.txt	/*buffer_complete*
 dictionary_complete	neocomplcache.txt	/*dictionary_complete*
 filename_complete	neocomplcache.txt	/*filename_complete*
 filename_include	neocomplcache.txt	/*filename_include*
+=======
+>>>>>>> origin/master
 g:neobundle#cache_file	neobundle.txt	/*g:neobundle#cache_file*
 g:neobundle#default_options	neobundle.txt	/*g:neobundle#default_options*
 g:neobundle#default_site	neobundle.txt	/*g:neobundle#default_site*
@@ -413,6 +373,7 @@ g:neobundle_default_hg_protocol	neobundle.txt	/*g:neobundle_default_hg_protocol*
 g:neobundle_default_site	neobundle.txt	/*g:neobundle_default_site*
 g:neobundle_log_filename	neobundle.txt	/*g:neobundle_log_filename*
 g:neobundle_rm_command	neobundle.txt	/*g:neobundle_rm_command*
+<<<<<<< HEAD
 g:neocomplcache_auto_completion_start_length	neocomplcache.txt	/*g:neocomplcache_auto_completion_start_length*
 g:neocomplcache_caching_limit_file_size	neocomplcache.txt	/*g:neocomplcache_caching_limit_file_size*
 g:neocomplcache_context_filetype_lists	neocomplcache.txt	/*g:neocomplcache_context_filetype_lists*
@@ -709,6 +670,9 @@ i_vimshell_default_key_mappings	vimshell.txt	/*i_vimshell_default_key_mappings*
 i_vimshell_int_default_key_mappings	vimshell.txt	/*i_vimshell_int_default_key_mappings*
 include_complete	neocomplcache.txt	/*include_complete*
 member_complete	neocomplcache.txt	/*member_complete*
+=======
+g:unite_source_neobundle_install_max_processes	neobundle.txt	/*g:unite_source_neobundle_install_max_processes*
+>>>>>>> origin/master
 neobundle	neobundle.txt	/*neobundle*
 neobundle#begin()	neobundle.txt	/*neobundle#begin()*
 neobundle#bundle()	neobundle.txt	/*neobundle#bundle()*
@@ -785,6 +749,7 @@ neobundle-unite-sources	neobundle.txt	/*neobundle-unite-sources*
 neobundle-usage	neobundle.txt	/*neobundle-usage*
 neobundle-variables	neobundle.txt	/*neobundle-variables*
 neobundle.txt	neobundle.txt	/*neobundle.txt*
+<<<<<<< HEAD
 neocomplcache	neocomplcache.txt	/*neocomplcache*
 neocomplcache#cancel_popup()	neocomplcache.txt	/*neocomplcache#cancel_popup()*
 neocomplcache#close_popup()	neocomplcache.txt	/*neocomplcache#close_popup()*
@@ -1054,92 +1019,12 @@ unite-action-directory	unite.txt	/*unite-action-directory*
 unite-action-file	unite.txt	/*unite-action-file*
 unite-action-history/unite	unite.txt	/*unite-action-history\/unite*
 unite-action-jump_list	unite.txt	/*unite-action-jump_list*
+=======
+>>>>>>> origin/master
 unite-action-neobundle-lazy	neobundle.txt	/*unite-action-neobundle-lazy*
 unite-action-neobundle-search	neobundle.txt	/*unite-action-neobundle-search*
-unite-action-openable	unite.txt	/*unite-action-openable*
-unite-action-resolution-order	unite.txt	/*unite-action-resolution-order*
-unite-action-source	unite.txt	/*unite-action-source*
-unite-action-source-bookmark	unite.txt	/*unite-action-source-bookmark*
-unite-action-source-command	unite.txt	/*unite-action-source-command*
-unite-action-source-function	unite.txt	/*unite-action-source-function*
-unite-action-source-mapping	unite.txt	/*unite-action-source-mapping*
-unite-action-source-process	unite.txt	/*unite-action-source-process*
-unite-action-source-register	unite.txt	/*unite-action-source-register*
-unite-action-source-window/gui	unite.txt	/*unite-action-source-window\/gui*
-unite-action-tab	unite.txt	/*unite-action-tab*
-unite-action-uri	unite.txt	/*unite-action-uri*
-unite-action-window	unite.txt	/*unite-action-window*
-unite-action-word	unite.txt	/*unite-action-word*
-unite-actions	unite.txt	/*unite-actions*
-unite-commands	unite.txt	/*unite-commands*
-unite-contents	unite.txt	/*unite-contents*
-unite-create-filter	unite.txt	/*unite-create-filter*
-unite-create-kind	unite.txt	/*unite-create-kind*
-unite-create-source	unite.txt	/*unite-create-source*
-unite-default-action	unite.txt	/*unite-default-action*
-unite-deprecated-variables	unite.txt	/*unite-deprecated-variables*
-unite-examples	unite.txt	/*unite-examples*
-unite-external-sources	unite.txt	/*unite-external-sources*
-unite-faq	unite.txt	/*unite-faq*
-unite-filter-attribute-description	unite.txt	/*unite-filter-attribute-description*
-unite-filter-attribute-filter	unite.txt	/*unite-filter-attribute-filter*
-unite-filter-attribute-name	unite.txt	/*unite-filter-attribute-name*
-unite-filter-attribute-pattern	unite.txt	/*unite-filter-attribute-pattern*
-unite-filter-attributes	unite.txt	/*unite-filter-attributes*
-unite-filter-converter_default	unite.txt	/*unite-filter-converter_default*
-unite-filter-converter_file_directory	unite.txt	/*unite-filter-converter_file_directory*
-unite-filter-converter_full_path	unite.txt	/*unite-filter-converter_full_path*
-unite-filter-converter_nothing	unite.txt	/*unite-filter-converter_nothing*
-unite-filter-converter_relative_abbr	unite.txt	/*unite-filter-converter_relative_abbr*
-unite-filter-converter_relative_word	unite.txt	/*unite-filter-converter_relative_word*
-unite-filter-converter_smart_path	unite.txt	/*unite-filter-converter_smart_path*
-unite-filter-converter_tail	unite.txt	/*unite-filter-converter_tail*
-unite-filter-converter_tail_abbr	unite.txt	/*unite-filter-converter_tail_abbr*
-unite-filter-matcher_context	unite.txt	/*unite-filter-matcher_context*
-unite-filter-matcher_default	unite.txt	/*unite-filter-matcher_default*
-unite-filter-matcher_fuzzy	unite.txt	/*unite-filter-matcher_fuzzy*
-unite-filter-matcher_glob	unite.txt	/*unite-filter-matcher_glob*
-unite-filter-matcher_hide_current_file	unite.txt	/*unite-filter-matcher_hide_current_file*
-unite-filter-matcher_hide_hidden_files	unite.txt	/*unite-filter-matcher_hide_hidden_files*
-unite-filter-matcher_migemo	unite.txt	/*unite-filter-matcher_migemo*
-unite-filter-matcher_project_files	unite.txt	/*unite-filter-matcher_project_files*
-unite-filter-matcher_project_ignore_files	unite.txt	/*unite-filter-matcher_project_ignore_files*
-unite-filter-matcher_regexp	unite.txt	/*unite-filter-matcher_regexp*
-unite-filter-sorter_default	unite.txt	/*unite-filter-sorter_default*
-unite-filter-sorter_ftime	unite.txt	/*unite-filter-sorter_ftime*
-unite-filter-sorter_length	unite.txt	/*unite-filter-sorter_length*
-unite-filter-sorter_nothing	unite.txt	/*unite-filter-sorter_nothing*
-unite-filter-sorter_rank	unite.txt	/*unite-filter-sorter_rank*
-unite-filter-sorter_reverse	unite.txt	/*unite-filter-sorter_reverse*
-unite-filter-sorter_word	unite.txt	/*unite-filter-sorter_word*
-unite-filter-variables	unite.txt	/*unite-filter-variables*
-unite-filters	unite.txt	/*unite-filters*
-unite-functions	unite.txt	/*unite-functions*
-unite-functions-core	unite.txt	/*unite-functions-core*
-unite-functions-customs	unite.txt	/*unite-functions-customs*
-unite-implicit-kind-for-a-source	unite.txt	/*unite-implicit-kind-for-a-source*
-unite-install	unite.txt	/*unite-install*
-unite-interface	unite.txt	/*unite-interface*
-unite-introduction	unite.txt	/*unite-introduction*
-unite-key-mappings	unite.txt	/*unite-key-mappings*
-unite-kind-attribute-action_table	unite.txt	/*unite-kind-attribute-action_table*
-unite-kind-attribute-alias_table	unite.txt	/*unite-kind-attribute-alias_table*
-unite-kind-attribute-default_action	unite.txt	/*unite-kind-attribute-default_action*
-unite-kind-attribute-name	unite.txt	/*unite-kind-attribute-name*
-unite-kind-attribute-parents	unite.txt	/*unite-kind-attribute-parents*
-unite-kind-attributes	unite.txt	/*unite-kind-attributes*
-unite-kind-buffer	unite.txt	/*unite-kind-buffer*
-unite-kind-cdable	unite.txt	/*unite-kind-cdable*
-unite-kind-command	unite.txt	/*unite-kind-command*
-unite-kind-common	unite.txt	/*unite-kind-common*
-unite-kind-completion	unite.txt	/*unite-kind-completion*
-unite-kind-directory	unite.txt	/*unite-kind-directory*
-unite-kind-file	unite.txt	/*unite-kind-file*
-unite-kind-file_base	unite.txt	/*unite-kind-file_base*
-unite-kind-file_vimfiler_base	unite.txt	/*unite-kind-file_vimfiler_base*
-unite-kind-guicmd	unite.txt	/*unite-kind-guicmd*
-unite-kind-jump_list	unite.txt	/*unite-kind-jump_list*
 unite-kind-neobundle	neobundle.txt	/*unite-kind-neobundle*
+<<<<<<< HEAD
 unite-kind-openable	unite.txt	/*unite-kind-openable*
 unite-kind-source	unite.txt	/*unite-kind-source*
 unite-kind-tab	unite.txt	/*unite-kind-tab*
@@ -1533,3 +1418,5 @@ vimshell.txt	vimshell.txt	/*vimshell.txt*
 vimshell_default_key_mappings	vimshell.txt	/*vimshell_default_key_mappings*
 vimshell_int_default_key_mappings	vimshell.txt	/*vimshell_int_default_key_mappings*
 without	solarized.txt	/*without*
+=======
+>>>>>>> origin/master

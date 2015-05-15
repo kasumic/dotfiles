@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 NeoBundleLock neobundle.vim 033911a11c55d0eb0b36edc60854e27436311a55
 NeoBundleLock neocomplcache 778181767467b8f8016828898779a646074d883a
 NeoBundleLock neocomplete-rsense.vim a8b7460a41eb96aa1c9e49b231dd95e216c8dc2d
@@ -12,3 +13,17 @@ NeoBundleLock vim-quickrun 72e2bd74f6a541ddee856eaafb655825789d91fa
 NeoBundleLock vimfiler.vim e65aaf9498fb52ba248027fc55f379bb030532a0
 NeoBundleLock vimproc ec8264063c1d46f88e74e6291d615d516f3fca8f
 NeoBundleLock vimshell 4939e10609c434becf6423b2f3876bb9c2be3464
+=======
+NeoBundleLock neobundle.vim da586948ea027442d6c1b724e3b8c0937e224454
+NeoBundleLock neocomplcache 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock neomru.vim 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock nerdtree 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock unite.vim 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock vim-ansible-yaml 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock vim-colors-solarized 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock vim-endwise 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock vim-powerline 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock vim-quickrun 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock vimfiler.vim 5aee5350e4eb54643b16ce84184b4ad218a11445
+NeoBundleLock vimshell 5aee5350e4eb54643b16ce84184b4ad218a11445
+>>>>>>> origin/master
