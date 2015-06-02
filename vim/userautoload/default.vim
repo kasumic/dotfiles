@@ -157,3 +157,7 @@ nmap <ESC><ESC> :nohlsearch<CR><ESC>
 "タブ移動
 nmap <Tab> gt
 nmap <S-Tab> gT
+
+if exists('$TMUX')
+  set term=screen-256color
+endif
