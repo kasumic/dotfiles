@@ -9,6 +9,8 @@ set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp
 set nobackup
 "スワップを編集中に作らない
 set noswapfile
+"undoファイルを作らない
+set noundofile
 "マウスサポート有効化
 set mouse=a
 ""ビープ音を鳴らさない
