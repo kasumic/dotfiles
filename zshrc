@@ -1,7 +1,7 @@
 bindkey -e
 export EDITOR=vim
 
-#$B%?%V$NL>A0(B
+#タブの名前
 echo -ne "\033]0;${HOST}\007"
 
 RPROMPT='%F{yellow}[%~]%f'
@@ -10,10 +10,10 @@ setopt transient_rprompt
 autoload -U compinit;compinit
 zstyle ':completion:*:default' menu select
 
-#$B%G%#%l%/%H%jL>$N$_$G$N0\F0(B
+#ディレクトリ名のみでの移動
 setopt auto_cd
 
-#$B%S!<%W2;$rLD$i$5$J$$(B
+#ビープ音を鳴らさない
 setopt nolistbeep
 
 #History
@@ -34,31 +34,31 @@ bindkey "^N" history-beginning-search-forward-end
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init - zsh)"
 
-#tmux$B$G<+F0%j%M!<%`$rL58z$K(B
+#tmuxで自動リネームを無効に
 DISABLE_AUTO_TITLE=true
 
 # ------------------------------
 ### Ls Color ###
-# $B?'$N@_Dj(B
+# 色の設定
 export LSCOLORS=Exfxcxdxbxegedabagacad
-# $BJd40;~$N?'$N@_Dj(B
+# 補完時の色の設定
 export LS_COLORS='di=01;34:ln=01;36:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-# ZLS_COLORS$B$H$O!)(B
+# ZLS_COLORSとは？
 export ZLS_COLORS=$LS_COLORS
-# ls$B%3%^%s%I;~!"<+F0$G?'$,$D$/(B(ls -G$B$N$h$&$J$b$N!)(B)
+# lsコマンド時、自動で色がつく(ls -Gのようなもの？)
 export CLICOLOR=true
-# $BJd408uJd$K?'$rIU$1$k(B
+# 補完候補に色を付ける
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 ### Prompt ###
-# $B%W%m%s%W%H$K?'$rIU$1$k(B
+# プロンプトに色を付ける
 autoload -U colors; colors
 
-#$B6&DL%(%$%j%"%9@_Dj(B
+#共通エイリアス設定
 alias ll="ls -lh"
 alias rm="rm -i"
 
-#$B8GM-@_Dj(B
+#固有設定
 case ${OSTYPE} in
   #Mac
   darwin*)
@@ -73,3 +73,4 @@ case ${OSTYPE} in
     alias ls='ls -F --color=always'
     ;;
 esac
+
