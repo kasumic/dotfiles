@@ -62,10 +62,11 @@ alias rm="rm -i"
 case ${OSTYPE} in
   #Mac
   darwin*)
-    PROMPT='%F{white}[%n@%f%F{yellow}%m%f %F{white}%c]%# %f'
+    PROMPT='%F{white}%n@%f%F{yellow}%m%f %F{white}%c%# %f'
     alias ls='ls -GF'
     alias ctags="/usr/local/bin/ctags"
     alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    export PATH=$HOME/work/bin:$PATH
     ;;
   linux*)
     PROMPT='%F{green}[%n@%f%F{blue}%m%f %F{green}%c]%# %f'
