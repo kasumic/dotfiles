@@ -30,6 +30,8 @@ syntax on
 set t_Co=256
 "colorscheme molokai
 colorscheme pablo
+"set background=dark
+"colorscheme solarized
 "--------------------------------------------
 "Editer 
 "--------------------------------------------
