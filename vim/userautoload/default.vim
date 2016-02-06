@@ -164,6 +164,9 @@ nmap <ESC><ESC> :nohlsearch<CR><ESC>
 "タブ移動
 nmap <Tab> gt
 nmap <S-Tab> gT
+"ctag
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
 if exists('$TMUX')
   set term=screen-256color
