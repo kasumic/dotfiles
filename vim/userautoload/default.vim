@@ -46,7 +46,8 @@ set showmatch matchtime=3
 "インデントの設定
 set cindent
 "カーソル行に下線表示
-"set cursorline
+set cursorline
+hi CursorLine   term=reverse cterm=none ctermbg=236
 "大文字でも小文字でも検索にヒットするように
 set ignorecase
 "ただし大文字を検索は大文字のみ
@@ -58,9 +59,9 @@ set hlsearch
 "スクロール余白
 set scrolloff=5
 "タブ文字、行末など不可視文字を表示する
-"set list
+set list
 "listで表示される文字のフォーマットを指定する
-"set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 "-----------------
 "タブの設定
 "-----------------
