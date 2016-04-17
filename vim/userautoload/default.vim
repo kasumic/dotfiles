@@ -104,7 +104,7 @@ function! s:my_tabline()  "{{{
   return s
 endfunction "}}}
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
-set showtabline=2 " 常にタブラインを表示
+"set showtabline=2 " 常にタブラインを表示
 
 " The prefix key.
 nnoremap    [Tag]   <Nop>
@@ -141,10 +141,10 @@ set showcmd
 set laststatus=2
 set statusline=%<%f\%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l/%L%V%8P
 "ステータスライン時刻表示用
-function! g:Date()
-    return strftime("%x %H:%M")
-endfunction
-set statusline+=\ \%{g:Date()}
+"function! g:Date()
+"    return strftime("%x %H:%M")
+"endfunction
+"set statusline+=\ \%{g:Date()}
 "xterm/screen対応
 set ttymouse=xterm2
 highlight statusline   term=NONE cterm=NONE guifg=white guibg=black ctermfg=white ctermbg=black

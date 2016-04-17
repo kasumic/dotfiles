@@ -35,7 +35,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-endwise.git'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'itchyny/lightline.vim'
 call neobundle#end()
 
 " .や::を入力したときにオムニ補完が有効になるようにする

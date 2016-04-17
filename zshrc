@@ -67,14 +67,6 @@ case ${OSTYPE} in
     alias ctags="/usr/local/bin/ctags"
     alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     export PATH=$HOME/work/bin:$PATH
-    #iTerm2,tmuxのタブ名をホスト名:実行コマンドに変更する
-    preexec() {
-        mycmd=(${(s: :)${1}})
-        echo -ne "\ek$(hostname|awk 'BEGIN{FS="."}{print $1}'):$mycmd[1]\e\\"
-    }
-    precmd() {
-        echo -ne "\ek$(hostname|awk 'BEGIN{FS="."}{print $1}'):idle\e\\"
-    }
     ;;
   linux*)
     PROMPT='%F{green}%n@%f%F{blue}%m%f %F{green}%c%# %f'
