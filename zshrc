@@ -4,7 +4,7 @@ export EDITOR=vim
 #タブの名前
 echo -ne "\033]0;${HOST}\007"
 
-RPROMPT='%F{yellow}[%~]%f'
+RPROMPT='%F{white}[%~]%f'
 setopt transient_rprompt
 
 autoload -U compinit;compinit
@@ -62,7 +62,8 @@ alias rm="rm -i"
 case ${OSTYPE} in
   #Mac
   darwin*)
-    PROMPT='%F{white}%n@%f%F{yellow}%m%f %F{white}%c%# %f'
+#    PROMPT='%F{white}%n@%f%F{yellow}%m%f %F{white}%c%# %f'
+    PROMPT='%K{blue}%n@%m%k %F{white}%c%# %f'
     alias ls='ls -GF'
     alias ctags="/usr/local/bin/ctags"
     alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
