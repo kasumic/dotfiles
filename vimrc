@@ -34,6 +34,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-endwise.git'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides' 
 call neobundle#end()
 
 " .や::を入力したときにオムニ補完が有効になるようにする

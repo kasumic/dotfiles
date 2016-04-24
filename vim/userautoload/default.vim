@@ -22,7 +22,7 @@ set mouse=a
 set vb t_vb=
 set visualbell
 "OSのクリップボードを使用
-set clipboard=unnamed
+set clipboard=unnamed,autoselect
 "コマンド履歴の保存数
 set history=1000
 "-------------------------
