@@ -11,6 +11,9 @@ syntax on
 scriptencoding utf-8
 set encoding=utf-8
 
+"ファイル書き込み時の文字コード
+set fileencoding=utf-8
+
 "ファイル文字コード自動認識(記載されている順番にオープンしていく)
 set fileencodings=iso-2022-jp,utf-8,ucs2le,ucs-2,cp932,euc-jp
 
