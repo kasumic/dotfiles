@@ -18,7 +18,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 "ファイル文字コード自動認識(記載されている順番にオープンしていく)
-set fileencodings=iso-2022-jp,utf-8,ucs2le,ucs-2,cp932,euc-jp
+set fileencodings=sjis,iso-2022-jp,utf-8,ucs2le,ucs-2,cp932,euc-jp
 
 "改行コードの自動判別
 set fileformats=unix,dos,mac
