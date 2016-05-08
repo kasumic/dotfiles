@@ -35,12 +35,14 @@ match ZenkakuSpace /　/
 "クリップボード設定
 "unnamed:ヤンクしたテキストそのままクリップボードにコピー
 "autoselect:ヴィジュアルモードで選択したテキストをクリップボードへコピー
-set clipboard=unnamed,autoselect
+if has('clipboard')
+  set clipboard=unnamed,autoselect
+endif
 
 "ターミナル上からの張り付けを許可
 set paste
 
-" 前回終了したカーソル行に移動
+"前回終了したカーソル行に移動
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
 "----------------------------------------------------------------------------
@@ -78,6 +80,15 @@ set backspace=indent,eol,start
 "入力補完
 set wildmenu
 
+"Undoファイルを~/.vimundoディレクトリもしくは~/.vimundoファイルへ
+"Undoファイルをvim起動時に再読み込みする
+if has('persistent_undo')
+  set undodir=./.vimundo,~/.vimundo
+  augroup vimrc-undofile
+    autocmd!
+    autocmd BufReadPre ~/* setlocal undofile
+  augroup END
+endif
 
 "----------------------------------------------------------------------------
 "インデント設定
@@ -89,6 +100,9 @@ set autoindent
 "<Tab>の代わりに空白文字を挿入する
 set expandtab
 
+"シフト移動幅
+set shiftwidth=2
+
 "タブ入力時に対応する空白の数
 set softtabstop=2
 
@@ -97,9 +111,6 @@ set tabstop=2
 
 "行頭の余白内で<Tab>を入れるとshiftwidth分だけインデントする
 set smarttab
-
-"シフト移動幅
-set shiftwidth=2
 
 "----------------------------------------------------------------------------
 "ステータスライン設定
