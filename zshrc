@@ -29,11 +29,6 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-#rbenv
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init - zsh)"
-
 #tmuxで自動リネームを無効に
 DISABLE_AUTO_TITLE=true
 
@@ -62,13 +57,17 @@ alias rm="rm -i"
 case ${OSTYPE} in
   #Mac
   darwin*)
-#    PROMPT='%F{white}%n@%f%F{yellow}%m%f %F{white}%c%# %f'
     PROMPT='%K{blue}%n@%m%k %F{green}%c%f%# '
     alias ls='ls -GF'
     alias ctags="/usr/local/bin/ctags"
     alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    #rbenv
+    #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+    export PATH=$HOME/.rbenv/bin:$PATH
+    eval "$(rbenv init - zsh)"
     export PATH=$HOME/work/bin:$PATH
     ;;
+  #Linux
   linux*)
     PROMPT='%F{green}%n@%f%F{blue}%m%f %F{green}%c%# %f'
     alias ls='ls -F --color=always'

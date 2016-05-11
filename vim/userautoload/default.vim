@@ -97,20 +97,20 @@ endif
 "新しい行を現在の行と同じインデントにする
 set autoindent
 
+"行頭の余白内で<Tab>を入れるとshiftwidth分だけインデントする
+set smarttab
+
 "<Tab>の代わりに空白文字を挿入する
 set expandtab
-
-"シフト移動幅
-set shiftwidth=2
-
-"タブ入力時に対応する空白の数
-set softtabstop=2
 
 "ファイル内の<Tab>が対応する空白の数
 set tabstop=2
 
-"行頭の余白内で<Tab>を入れるとshiftwidth分だけインデントする
-set smarttab
+"シフト移動幅(シフトオペレータ（>>）やautoindentで挿入される量)
+set shiftwidth=2
+
+"タブ入力時に対応する空白の数
+set softtabstop=0
 
 "----------------------------------------------------------------------------
 "ステータスライン設定
