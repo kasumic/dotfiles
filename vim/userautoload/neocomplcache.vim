@@ -28,5 +28,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-P>" : "\<S-TAB>"
 inoremap <expr><C-h> neocomplcache#smart_close_popup(). "\<C-h>"
 
 " ポップの配色
-hi Pmenu ctermbg=35
-hi PmenuSel ctermbg=1
+hi Pmenu ctermbg=255
+hi Pmenu ctermfg=0
+hi PmenuSel ctermbg=27
+hi PmenuSel ctermfg=255

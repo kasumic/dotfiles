@@ -18,7 +18,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 "ファイル文字コード自動認識(記載されている順番にオープンしていく)
-set fileencodings=sjis,iso-2022-jp,utf-8,ucs2le,ucs-2,cp932,euc-jp
+set fileencodings=utf-8,sjis,iso-2022-jp,ucs2le,ucs-2,cp932,euc-jp
 
 "改行コードの自動判別
 set fileformats=unix,dos,mac
@@ -38,9 +38,6 @@ match ZenkakuSpace /　/
 if has('clipboard')
   set clipboard=unnamed,autoselect
 endif
-
-"ターミナル上からの張り付けを許可
-set paste
 
 "前回終了したカーソル行に移動
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
@@ -168,7 +165,7 @@ set visualbell
 set list
 "Unix用設定
 if has('unix') 
-  set listchars=tab:▸-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+  set listchars=tab:>\-
 endif
 
 "Mac用設定

@@ -1,8 +1,10 @@
-source ~/.vimrc
+"source ~/.vimrc
 
 "---------------------------------------------------------------------------
 " フォント設定:
 "
+colorscheme newspaper
+
 if has('win32')
   " Windows用
   set guifont=MS_Gothic:h12:cSHIFTJIS
@@ -22,4 +24,3 @@ elseif has('xfontset')
   " UNIX用 (xfontsetを使用)
   set guifontset=a14,r14,k14
 endif
-
