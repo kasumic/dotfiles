@@ -1,10 +1,15 @@
 "source ~/.vimrc
 
 "---------------------------------------------------------------------------
-" フォント設定:
-"
+"カラー設定
 colorscheme newspaper
+"カーソル行をハイライト無効
+set nocursorline
 
+hi Pmenu                    guibg=#ffffff
+hi PmenuSel                 guifg=#000000 guibg=#ffff66
+
+" フォント設定:
 if has('win32')
   " Windows用
   set guifont=MS_Gothic:h12:cSHIFTJIS
