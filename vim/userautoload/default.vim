@@ -159,7 +159,7 @@ set scrolloff=5
 set showmatch
 
 "ビープ音を可視化
-set visualbell
+"set visualbell
 
 "タブ文字、行末など不可視文字を表示する
 set list
