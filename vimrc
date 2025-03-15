@@ -5,7 +5,7 @@
 set nocompatible
 
 "マウスサポート
-set mouse=a
+set mouse-=a
 
 "構文ハイライトを有効にする
 syntax on
