@@ -51,7 +51,7 @@ set t_Co=256
 "カラースキーマ
 "Unix用設定
 if has('unix') 
-  colorscheme pablo
+  colorscheme desert
 endif
 
 "Mac用設定
