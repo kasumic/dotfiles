@@ -57,7 +57,7 @@ alias rm="rm -i"
 case ${OSTYPE} in
   #Mac
   darwin*)
-    PROMPT=' %n@%K{025}%F{white}%m%f%k:%c# '
+    PROMPT=' %n@%K{025}%F{white}%m%f%k:%c$ '
     RPROMPT='%F{yellow}%d%f'
     alias ls='ls -GF'
     #rbenv
@@ -68,7 +68,7 @@ case ${OSTYPE} in
     ;;
   #Linux
   linux*)
-    PROMPT='%F{green}%n@%f%F{blue}%m%f %F{green}%c%# %f'
+    PROMPT='%F{green}%n@%f%F{blue}%m%f %F{green}%c%$ %f'
     alias ls='ls -F --color=always'
     ;;
 esac
