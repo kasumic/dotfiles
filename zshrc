@@ -57,10 +57,9 @@ alias rm="rm -i"
 case ${OSTYPE} in
   #Mac
   darwin*)
-    PROMPT='%K{blue}%n@%m%k %F{green}%c%f%# '
+    PROMPT=' %n@%K{025}%F{white}%m%f%k:%c# '
+    RPROMPT='%F{yellow}%d%f'
     alias ls='ls -GF'
-    alias ctags="/usr/local/bin/ctags"
-    alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     #rbenv
     #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
     export PATH=$HOME/.rbenv/bin:$PATH
