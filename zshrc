@@ -60,11 +60,6 @@ case ${OSTYPE} in
     PROMPT=' %n@%K{025}%F{white}%m%f%k:%c$ '
     RPROMPT='%F{yellow}%d%f'
     alias ls='ls -GF'
-    #rbenv
-    #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-    export PATH=$HOME/.rbenv/bin:$PATH
-    eval "$(rbenv init - zsh)"
-    export PATH=$HOME/work/bin:$PATH
     ;;
   #Linux
   linux*)
