@@ -32,43 +32,58 @@ bindkey "^N" history-beginning-search-forward-end
 #tmuxで自動リネームを無効に
 DISABLE_AUTO_TITLE=true
 
-# ------------------------------
-### Ls Color ###
-# 色の設定
-export LSCOLORS=Exfxcxdxbxegedabagacad
-# 補完時の色の設定
-export LS_COLORS='di=01;34:ln=01;36:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-# ZLS_COLORSとは？
-export ZLS_COLORS=$LS_COLORS
-# lsコマンド時、自動で色がつく(ls -Gのようなもの？)
-export CLICOLOR=true
-# 補完候補に色を付ける
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
 #共通エイリアス設定
 alias ll="ls -lh"
 alias rm="rm -i"
 
-# 色と関数の有効化
-autoload -Uz colors && colors
+# ──────────────────────────────
+# 基本初期化
+autoload -Uz compinit colors && compinit
 setopt prompt_subst
 
-# ✅ OSアイコン関数（左プロンプト用）
+# ──────────────────────────────
+# 補完スクリプト格納先と初期化
+fpath=(~/.zsh/completion $fpath)
+
+# docker 補完スクリプトを生成（初回のみ）
+if command -v docker >/dev/null 2>&1; then
+  if [[ ! -f ~/.zsh/completion/_docker ]]; then
+    docker completion zsh > ~/.zsh/completion/_docker
+  fi
+fi
+
+# ──────────────────────────────
+
+# zsh-autosuggestions（履歴補完）
+if [[ -d ~/.zsh/zsh-autosuggestions ]]; then
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# zsh-syntax-highlighting（構文色付け）※必ず最後に
+if [[ -d ~/.zsh/zsh-syntax-highlighting ]]; then
+  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# ──────────────────────────────
+# プロンプト表示用関数群
 function os_icon {
   case "$OSTYPE" in
-    darwin*) echo "🍎" ;;               # macOS
+    darwin*) echo "🍎" ;;
     linux*)
       if grep -q Microsoft /proc/version 2>/dev/null; then
-        echo "🪟"                       # WSL
+        echo "🫯"
       else
-        echo "🐧"                       # Linux (native)
+        echo "🐧"
       fi ;;
-    msys*|cygwin*|win32) echo "🪟" ;;   # Windows Git Bash etc
-    *) echo "💻" ;;                     # fallback
+    msys*|cygwin*|win32) echo "🫯" ;;
+    *) echo "💻" ;;
   esac
 }
 
-# 絶対パスの短縮（30文字以上なら末尾表示）
+function current_dir_name {
+  echo "${PWD##*/}"
+}
+
 function shorten_path {
   local path=$PWD
   local maxlen=30
@@ -79,31 +94,44 @@ function shorten_path {
   fi
 }
 
-# 🎯 左プロンプト（OSアイコン＋ディレクトリ名のみ）
-PROMPT='%F{white}%n%f@%F{cyan}%m%f$(os_icon):%~%f %# '
+# ──────────────────────────────
+# 🎯 左プロンプト
+PROMPT='%F{white}%n%f@%F{cyan}%m%f$(os_icon): %~%f %# '
 
-# 📁 右プロンプト（絶対パス・黄緑色）
+# 📁 右プロンプト
 RPROMPT='%B%F{green}$(shorten_path)%f%b'
 
-# --- kubectl 補完を設定 ---
-if type kubectl >/dev/null 2>&1; then
-  mkdir -p ${ZDOTDIR:-$HOME}/.zsh/completion
-  if [ ! -f ${ZDOTDIR:-$HOME}/.zsh/completion/_kubectl ]; then
-    kubectl completion zsh > ${ZDOTDIR:-$HOME}/.zsh/completion/_kubectl
-  fi
-  fpath=(${ZDOTDIR:-$HOME}/.zsh/completion $fpath)
+# ──────────────────────────────
+# ls エイリアス設定（exa優先, なければOS別にlsを使う）
 
-  autoload -Uz compinit
-  # 補完キャッシュなどをクリアするなら以下
-  # compinit -u
-  compinit
+# exa 用カラー設定（見やすさ重視）
+export EXA_COLORS="di=1;92:ln=1;96:ex=1;93:da=1;97"
+export LS_COLORS="di=1;92:ln=1;96:ex=1;93:fi=0"
+
+if command -v exa >/dev/null 2>&1; then
+  # exa がインストールされていれば優先使用
+  alias ls='exa --icons --group-directories-first --color=always'
+else
+  case "$OSTYPE" in
+    darwin*)  # macOS
+      alias ls='ls -GF'
+      ;;
+    linux*)
+      if grep -q Microsoft /proc/version 2>/dev/null; then
+        # WSL
+        alias ls='ls -F --color=auto'
+      else
+        # Linux ネイティブ
+        alias ls='ls -F --color=auto'
+      fi
+      ;;
+    msys*|cygwin*|win32)
+      # Windows Git Bash など
+      alias ls='ls -F'
+      ;;
+    *)
+      # その他未対応環境
+      alias ls='ls -F'
+      ;;
+  esac
 fi
-
-# 補完スクリプト読み込み先に docker 補完を追加
-fpath=(~/.zsh/completion $fpath)
-
-# zsh-autosuggestions（入力中にグレーで履歴提案）
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# zsh-syntax-highlighting（コマンド構文に色付け）
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
