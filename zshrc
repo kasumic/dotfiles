@@ -82,6 +82,19 @@ function shorten_path {
 # 🎯 左プロンプト（OSアイコン＋ディレクトリ名のみ）
 PROMPT='%F{white}%n%f@%F{cyan}%m%f$(os_icon):%~%f %# '
 
-
 # 📁 右プロンプト（絶対パス・黄緑色）
 RPROMPT='%B%F{green}$(shorten_path)%f%b'
+
+# --- kubectl 補完を設定 ---
+if type kubectl >/dev/null 2>&1; then
+  mkdir -p ${ZDOTDIR:-$HOME}/.zsh/completion
+  if [ ! -f ${ZDOTDIR:-$HOME}/.zsh/completion/_kubectl ]; then
+    kubectl completion zsh > ${ZDOTDIR:-$HOME}/.zsh/completion/_kubectl
+  fi
+  fpath=(${ZDOTDIR:-$HOME}/.zsh/completion $fpath)
+
+  autoload -Uz compinit
+  # 補完キャッシュなどをクリアするなら以下
+  # compinit -u
+  compinit
+fi
