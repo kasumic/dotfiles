@@ -45,26 +45,44 @@ export CLICOLOR=true
 # 補完候補に色を付ける
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-### Prompt ###
-# プロンプトに色を付ける
-autoload -U colors; colors
-
 #共通エイリアス設定
 alias ll="ls -lh"
 alias rm="rm -i"
 
-#固有設定
-case ${OSTYPE} in
-  #Mac
-  darwin*)
-    PROMPT=' %n@%K{025}%F{white}%m%f%k:%c$ '
-    RPROMPT='%F{yellow}%d%f'
-    alias ls='ls -GF'
-    ;;
-  #Linux
-  linux*)
-    PROMPT='%F{green}%n@%f%F{blue}%m%f %F{green}%c%$ %f'
-    alias ls='ls -F --color=always'
-    ;;
-esac
+# 色と関数の有効化
+autoload -Uz colors && colors
+setopt prompt_subst
 
+# ✅ OSアイコン関数（左プロンプト用）
+function os_icon {
+  case "$OSTYPE" in
+    darwin*) echo "🍎" ;;               # macOS
+    linux*)
+      if grep -q Microsoft /proc/version 2>/dev/null; then
+        echo "🪟"                       # WSL
+      else
+        echo "🐧"                       # Linux (native)
+      fi ;;
+    msys*|cygwin*|win32) echo "🪟" ;;   # Windows Git Bash etc
+    *) echo "💻" ;;                     # fallback
+  esac
+}
+
+# 絶対パスの短縮（30文字以上なら末尾表示）
+function shorten_path {
+  local path=$PWD
+  local maxlen=30
+  if (( ${#path} > maxlen )); then
+    echo "...${path[-$maxlen,-1]}"
+  else
+    echo "$path"
+  fi
+}
+
+# 🎯 左プロンプト（OSアイコン＋ディレクトリ名のみ）
+PROMPT='%F{white}%n%f@%F{cyan}%m%f$(os_icon):%~%f %# '
+
+
+# 📁 右プロンプト（絶対パス・黄緑色）
+# 方法①: 太字green（比較的互換性高く黄緑寄り）
+RPROMPT='%B%F{green}$(shorten_path)%f%b'
