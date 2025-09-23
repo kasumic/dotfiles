@@ -98,3 +98,12 @@ if type kubectl >/dev/null 2>&1; then
   # compinit -u
   compinit
 fi
+
+# 補完スクリプト読み込み先に docker 補完を追加
+fpath=(~/.zsh/completion $fpath)
+
+# zsh-autosuggestions（入力中にグレーで履歴提案）
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-syntax-highlighting（コマンド構文に色付け）
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
