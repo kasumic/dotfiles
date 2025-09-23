@@ -84,5 +84,4 @@ PROMPT='%F{white}%n%f@%F{cyan}%m%f$(os_icon):%~%f %# '
 
 
 # 📁 右プロンプト（絶対パス・黄緑色）
-# 方法①: 太字green（比較的互換性高く黄緑寄り）
 RPROMPT='%B%F{green}$(shorten_path)%f%b'
