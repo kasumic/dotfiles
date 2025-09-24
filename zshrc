@@ -1,14 +1,13 @@
-bindkey -e
+# ──────────────────────────────
+# 基本初期化
+autoload -Uz compinit colors && compinit
+setopt prompt_subst
+
 export EDITOR=vim
+bindkey -e
 
 #タブの名前
 echo -ne "\033]0;${HOST}\007"
-
-RPROMPT='[%F{green}%~%f]'
-setopt transient_rprompt
-
-autoload -U compinit;compinit
-zstyle ':completion:*:default' menu select
 
 #ディレクトリ名のみでの移動
 setopt auto_cd
@@ -36,10 +35,6 @@ DISABLE_AUTO_TITLE=true
 alias ll="ls -lh"
 alias rm="rm -i"
 
-# ──────────────────────────────
-# 基本初期化
-autoload -Uz compinit colors && compinit
-setopt prompt_subst
 
 # ──────────────────────────────
 # 補完スクリプト格納先と初期化
