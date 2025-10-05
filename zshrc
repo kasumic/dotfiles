@@ -49,14 +49,7 @@ fi
 
 # --- AWS CLI completion ---
 # 必要: aws-cli v2 が入っていること（aws_completer が提供されます）
-# zsh で bash 形式の補完を有効化してから、aws_completer を紐づけます
 if command -v aws >/dev/null 2>&1; then
-  # zsh 標準の補完
-  autoload -Uz compinit && compinit
-
-  # bash 互換の補完を有効化（すでに読み込んでいても安全）
-  autoload -Uz bashcompinit && bashcompinit
-
   # aws コマンドに completer を関連付け
   # ※ nospace は候補確定時にスペースを自動で付けないオプション（好みで外してOK）
   if command -v aws_completer >/dev/null 2>&1; then
